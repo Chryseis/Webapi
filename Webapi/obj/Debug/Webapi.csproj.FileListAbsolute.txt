@@ -11,3 +11,9 @@ E:\VisualPragrams\Webapi2\Webapi\obj\Debug\Webapi.pdb
 E:\VisualPragrams\Webapi2\Webapi\bin\Debug\IRepository.dll
 E:\VisualPragrams\Webapi2\Webapi\bin\Debug\IRepository.pdb
 E:\VisualPragrams\Webapi2\Webapi\obj\Debug\Webapi.csprojResolveAssemblyReference.cache
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Infrastructure.dll
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.Integration.WebApi.dll
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.dll
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Infrastructure.pdb
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.Integration.WebApi.xml
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.xml

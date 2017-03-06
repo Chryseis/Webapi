@@ -2,3 +2,4 @@ E:\VisualPragrams\Webapi2\Entity\bin\Debug\Entity.dll
 E:\VisualPragrams\Webapi2\Entity\bin\Debug\Entity.pdb
 E:\VisualPragrams\Webapi2\Entity\obj\Debug\Entity.dll
 E:\VisualPragrams\Webapi2\Entity\obj\Debug\Entity.pdb
+E:\VisualPragrams\Webapi2\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache

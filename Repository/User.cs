@@ -9,6 +9,10 @@ namespace Repository
 {
     public class User:IUser
     {
+        public User()
+        {
+ 
+        }
         public void GetUser() 
         {
             int i = 0;

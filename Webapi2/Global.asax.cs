@@ -11,6 +11,8 @@ using Autofac.Integration.WebApi;
 using System.Reflection;
 using IRepository;
 using Repository;
+using Webapi.Controller;
+using Infrastructure;
 
 namespace Webapi2
 {
@@ -19,17 +21,20 @@ namespace Webapi2
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            var config = GlobalConfiguration.Configuration;
+            //var config = GlobalConfiguration.Configuration;
             //config.MapHttpAttributeRoutes();
             //config.Routes.MapHttpRoute("default", "api/{controller}/{action}/{id}", new { id = RouteParameter.Optional });
             //config.EnsureInitialized(); 
             
-            var builder = new ContainerBuilder();
-            builder.RegisterType<User>().As<IUser>();
-            builder.RegisterApiControllers(Assembly.Load("Webapi"));
-            builder.RegisterWebApiFilterProvider(config);
-            var container = builder.Build();
-            config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+            //var builder = new ContainerBuilder();
+            //builder.RegisterType<User>().As<IUser>();
+            //builder.RegisterType<GlobalAuthorizationFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
+            //builder.RegisterType<GlobalActionFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
+            //builder.RegisterType<GlobalExceptionFilter>().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
+            //builder.RegisterApiControllers(Assembly.Load("Webapi"));
+            //builder.RegisterWebApiFilterProvider(config);
+            //var container = builder.Build();
+            //config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
 

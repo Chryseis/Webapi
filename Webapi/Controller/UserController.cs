@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Webapi.Model;
 using IRepository;
+using Infrastructure;
 
 namespace Webapi.Controller
 {
-    public class UserController : ApiController
+    public class UserController : BaseController
     {
         private IUser _userService;
 

@@ -22,3 +22,8 @@ E:\VisualPragrams\Webapi2\Webapi2\bin\IRepository.dll
 E:\VisualPragrams\Webapi2\Webapi2\bin\Repository.dll
 E:\VisualPragrams\Webapi2\Webapi2\bin\IRepository.pdb
 E:\VisualPragrams\Webapi2\Webapi2\bin\Repository.pdb
+E:\VisualPragrams\Webapi2\Webapi2\bin\Infrastructure.dll
+E:\VisualPragrams\Webapi2\Webapi2\bin\Infrastructure.pdb
+E:\VisualPragrams\Webapi2\Webapi2\bin\System.Web.Cors.dll
+E:\VisualPragrams\Webapi2\Webapi2\bin\System.Web.Http.Cors.dll
+E:\VisualPragrams\Webapi2\Webapi2\bin\System.Web.Http.Cors.xml

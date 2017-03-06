@@ -61,6 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
+      <Project>{44f0be4b-9f62-4a27-b248-246014bf02dd}</Project>
+      <Name>Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IRepository\IRepository.csproj">
       <Project>{a8ba325e-5793-4d5c-958f-e2373abaaabd}</Project>
       <Name>IRepository</Name>
