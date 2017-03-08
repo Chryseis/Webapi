@@ -10,6 +10,7 @@ using IRepository;
 using Repository;
 using System.Reflection;
 using System.Web.Http.Cors;
+using log4net;
 
 namespace Webapi2
 {
@@ -21,6 +22,7 @@ namespace Webapi2
             var cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors(cors);
 
+            //属性路由
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -29,11 +31,13 @@ namespace Webapi2
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            //注册autofac
             var builder = new ContainerBuilder();
-            builder.RegisterType<User>().As<IUser>();
             builder.RegisterType<GlobalAuthorizationFilter>().AsWebApiAuthorizationFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<GlobalActionFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<GlobalExceptionFilter>().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
+            builder.RegisterType<User>().As<IUser>();
+            builder.Register(c => LogManager.GetLogger("GlobalLog")).As<ILog>();
             builder.RegisterApiControllers(Assembly.Load("Webapi"));
             builder.RegisterWebApiFilterProvider(config);
             var container = builder.Build();

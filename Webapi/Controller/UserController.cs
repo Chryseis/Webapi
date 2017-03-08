@@ -7,6 +7,7 @@ using System.Web.Http;
 using Webapi.Model;
 using IRepository;
 using Infrastructure;
+using log4net;
 
 namespace Webapi.Controller
 {
@@ -14,9 +15,12 @@ namespace Webapi.Controller
     {
         private IUser _userService;
 
-        public UserController(IUser userService)
+        private ILog _logger;
+
+        public UserController(IUser userService, ILog logger)
         {
             this._userService = userService;
+            this._logger = logger;
         }
         
 
@@ -29,10 +33,10 @@ namespace Webapi.Controller
         [HttpGet]
         public ResUserModel GetUser([FromUri]ReqUserModel req)
         {
-
             var userId = req.userId;
             var user = userList.Where(t => t.userId == userId).First();
             _userService.GetUser();
+            _logger.Info("hahaha");
             return user;
         }
     }

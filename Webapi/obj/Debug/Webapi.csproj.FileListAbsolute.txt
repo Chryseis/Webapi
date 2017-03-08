@@ -17,3 +17,7 @@ E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.dll
 E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Infrastructure.pdb
 E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.Integration.WebApi.xml
 E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Autofac.xml
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\Webapi.dll.config
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\log4net.dll
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\log4net.xml
+E:\VisualPragrams\Webapi2\Webapi\bin\Debug\MySql.Data.dll
