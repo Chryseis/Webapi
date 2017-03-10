@@ -8,6 +8,8 @@ using Webapi.Model;
 using IRepository;
 using Infrastructure;
 using log4net;
+using Autofac;
+using Autofac.Features.AttributeFilters;
 
 namespace Webapi.Controller
 {
@@ -17,7 +19,7 @@ namespace Webapi.Controller
 
         private ILog _logger;
 
-        public UserController(IUser userService, ILog logger)
+        public UserController(IUser userService, [KeyFilter("GlobalLog")] ILog logger)
         {
             this._userService = userService;
             this._logger = logger;
@@ -36,7 +38,7 @@ namespace Webapi.Controller
             var userId = req.userId;
             var user = userList.Where(t => t.userId == userId).First();
             _userService.GetUser();
-            _logger.Info("hahaha");
+            _logger.Info("哈哈哈");
             return user;
         }
     }

@@ -5,3 +5,5 @@ E:\VisualPragrams\Webapi2\Repository\bin\Debug\IRepository.dll
 E:\VisualPragrams\Webapi2\Repository\bin\Debug\IRepository.pdb
 E:\VisualPragrams\Webapi2\Repository\obj\Debug\Repository.dll
 E:\VisualPragrams\Webapi2\Repository\obj\Debug\Repository.pdb
+E:\VisualPragrams\Webapi2\Repository\bin\Debug\log4net.dll
+E:\VisualPragrams\Webapi2\Repository\bin\Debug\log4net.xml

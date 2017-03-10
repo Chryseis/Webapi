@@ -2,4 +2,6 @@ E:\VisualPragrams\Webapi2\IRepository\bin\Debug\IRepository.dll
 E:\VisualPragrams\Webapi2\IRepository\bin\Debug\IRepository.pdb
 E:\VisualPragrams\Webapi2\IRepository\obj\Debug\IRepository.dll
 E:\VisualPragrams\Webapi2\IRepository\obj\Debug\IRepository.pdb
+E:\VisualPragrams\Webapi2\IRepository\bin\Debug\log4net.dll
+E:\VisualPragrams\Webapi2\IRepository\bin\Debug\log4net.xml
 E:\VisualPragrams\Webapi2\IRepository\obj\Debug\IRepository.csprojResolveAssemblyReference.cache

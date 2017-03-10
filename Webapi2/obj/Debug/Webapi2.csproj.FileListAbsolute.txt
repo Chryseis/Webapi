@@ -30,3 +30,4 @@ E:\VisualPragrams\Webapi2\Webapi2\bin\System.Web.Http.Cors.xml
 E:\VisualPragrams\Webapi2\Webapi2\bin\log4net.config
 E:\VisualPragrams\Webapi2\Webapi2\bin\log4net.dll
 E:\VisualPragrams\Webapi2\Webapi2\bin\log4net.xml
+E:\VisualPragrams\Webapi2\Webapi2\bin\MySql.Data.dll

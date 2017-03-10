@@ -37,7 +37,8 @@ namespace Webapi2
             builder.RegisterType<GlobalActionFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<GlobalExceptionFilter>().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<User>().As<IUser>();
-            builder.Register(c => LogManager.GetLogger("GlobalLog")).As<ILog>();
+            builder.Register(c => LogManager.GetLogger("GlobalLog")).Keyed("GlobalLog", typeof(ILog));
+            builder.Register(c => LogManager.GetLogger("ExceptionLog")).Keyed("ExceptionLog", typeof(ILog));
             builder.RegisterApiControllers(Assembly.Load("Webapi"));
             builder.RegisterWebApiFilterProvider(config);
             var container = builder.Build();
