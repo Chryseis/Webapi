@@ -67,6 +67,8 @@
     <Compile Include="GlobalAuthenticationFilter.cs" />
     <Compile Include="GlobalAuthorizationFilter.cs" />
     <Compile Include="GlobalExceptionFilter.cs" />
+    <Compile Include="GlobalExceptionFilterForWebapi.cs" />
+    <Compile Include="GlobalExceptionLoggerForWebapi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestBase.cs" />
     <Compile Include="ResponseBase.cs" />

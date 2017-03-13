@@ -17,12 +17,10 @@ namespace Infrastructure
 
         public Task OnAuthorizationAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
         {
-            var auth = new AuthorizeAttribute(); 
             //var response = new HttpResponseMessage();
             //response.Content = new StringContent("{'a':1}");
             //actionContext.Response = response;
             //actionContext.Response.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            auth.Roles = "admin";
             return Task.FromResult(0);
         }
     }

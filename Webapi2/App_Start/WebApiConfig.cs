@@ -12,6 +12,7 @@ using Repository;
 using System.Reflection;
 using System.Web.Http.Cors;
 using log4net;
+using System.Web.Http.ExceptionHandling;
 
 namespace Webapi2
 {
@@ -31,6 +32,7 @@ namespace Webapi2
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+           
 
             //注册autofac
             var builder = new ContainerBuilder();
@@ -39,10 +41,12 @@ namespace Webapi2
             builder.RegisterType<GlobalAuthenticationFilter>().AsWebApiAuthenticationFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<GlobalAuthorizationFilter>().AsWebApiAuthorizationFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<GlobalActionFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
-            builder.RegisterType<GlobalExceptionFilter>().WithAttributeFiltering().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
+           // builder.RegisterType<GlobalExceptionFilter>().WithAttributeFiltering().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
             builder.RegisterType<User>().As<IUser>();
             builder.RegisterApiControllers(Assembly.Load("Webapi")).WithAttributeFiltering();
             builder.RegisterWebApiFilterProvider(config);
+            config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionFilterForWebapi());
+            config.Services.Replace(typeof(IExceptionLogger),new GlobalExceptionLoggerForWebapi());
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
         }
