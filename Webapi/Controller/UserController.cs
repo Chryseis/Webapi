@@ -13,6 +13,7 @@ using Autofac.Features.AttributeFilters;
 
 namespace Webapi.Controller
 {
+    [Authorize(Roles="admin")]
     public class UserController : BaseController
     {
         private IUser _userService;

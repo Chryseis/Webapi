@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="BaseController.cs" />
     <Compile Include="GlobalActionFilter.cs" />
+    <Compile Include="GlobalAuthenticationFilter.cs" />
     <Compile Include="GlobalAuthorizationFilter.cs" />
     <Compile Include="GlobalExceptionFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
