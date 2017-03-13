@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
+using Autofac.Features.AttributeFilters;
 using Infrastructure;
 using IRepository;
 using Repository;
@@ -33,13 +34,13 @@ namespace Webapi2
 
             //注册autofac
             var builder = new ContainerBuilder();
-            builder.RegisterType<GlobalAuthorizationFilter>().AsWebApiAuthorizationFilterFor<BaseController>().InstancePerRequest();
-            builder.RegisterType<GlobalActionFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
-            builder.RegisterType<GlobalExceptionFilter>().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
-            builder.RegisterType<User>().As<IUser>();
             builder.Register(c => LogManager.GetLogger("GlobalLog")).Keyed("GlobalLog", typeof(ILog));
             builder.Register(c => LogManager.GetLogger("ExceptionLog")).Keyed("ExceptionLog", typeof(ILog));
-            builder.RegisterApiControllers(Assembly.Load("Webapi"));
+            builder.RegisterType<GlobalAuthorizationFilter>().AsWebApiAuthorizationFilterFor<BaseController>().InstancePerRequest();
+            builder.RegisterType<GlobalActionFilter>().AsWebApiActionFilterFor<BaseController>().InstancePerRequest();
+            builder.RegisterType<GlobalExceptionFilter>().WithAttributeFiltering().AsWebApiExceptionFilterFor<BaseController>().InstancePerRequest();
+            builder.RegisterType<User>().As<IUser>();
+            builder.RegisterApiControllers(Assembly.Load("Webapi")).WithAttributeFiltering();
             builder.RegisterWebApiFilterProvider(config);
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);

@@ -19,7 +19,7 @@ namespace Webapi.Controller
 
         private ILog _logger;
 
-        public UserController(IUser userService, [KeyFilter("GlobalLog")] ILog logger)
+        public UserController(IUser userService,[KeyFilter("GlobalLog")] ILog logger)
         {
             this._userService = userService;
             this._logger = logger;
