@@ -13,7 +13,7 @@ namespace Infrastructure
 
         public Task AuthenticateAsync(System.Web.Http.Filters.HttpAuthenticationContext context, System.Threading.CancellationToken cancellationToken)
         {
-            context.Principal = new GenericPrincipal(new GenericIdentity("admin"),new string[]{"admin"});
+            context.Principal = new GenericPrincipal(new GenericIdentity("123"),new string[]{"admin","user"});
             return Task.FromResult(0);
         }
 

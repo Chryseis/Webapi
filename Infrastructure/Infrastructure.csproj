@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseController.cs" />
+    <Compile Include="CustomAuthorizeAttribute.cs" />
     <Compile Include="GlobalActionFilter.cs" />
     <Compile Include="GlobalAuthenticationFilter.cs" />
     <Compile Include="GlobalAuthorizationFilter.cs" />
