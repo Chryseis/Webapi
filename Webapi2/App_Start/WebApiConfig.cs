@@ -45,7 +45,7 @@ namespace Webapi2
             builder.RegisterType<User>().As<IUser>();
             builder.RegisterApiControllers(Assembly.Load("Webapi")).WithAttributeFiltering();
             builder.RegisterWebApiFilterProvider(config);
-            config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionFilterForWebapi());
+            //config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionFilterForWebapi());
             config.Services.Replace(typeof(IExceptionLogger),new GlobalExceptionLoggerForWebapi());
             var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
