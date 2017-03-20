@@ -10,6 +10,8 @@ using Infrastructure;
 using log4net;
 using Autofac;
 using Autofac.Features.AttributeFilters;
+using Entity;
+using AutoMapper;
 
 namespace Webapi.Controller
 {
@@ -36,11 +38,11 @@ namespace Webapi.Controller
         [HttpGet]
         public ResUserModel GetUser([FromUri]ReqUserModel req)
         {
+            var user = new User { userId=1,sex=2,address="mintcode"};
+
             var userId = req.userId;
-            var user = userList.Where(t => t.userId == userId).First();
-            _userService.GetUser();
-            _logger.Info("哈哈哈");
-            return user;
+            var resUser = Mapper.Map<ResUserModel>(user);
+            return resUser;
         }
     }
 }

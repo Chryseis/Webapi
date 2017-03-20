@@ -13,6 +13,7 @@ using System.Reflection;
 using System.Web.Http.Cors;
 using log4net;
 using System.Web.Http.ExceptionHandling;
+using Webapi.AutoMapper;
 
 namespace Webapi2
 {
@@ -20,6 +21,8 @@ namespace Webapi2
     {
         public static void Register(HttpConfiguration config)
         {
+            Configuration.Configure();
+
             //开启跨域
             var cors = new EnableCorsAttribute("*","*","*");
             config.EnableCors(cors);

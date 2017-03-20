@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CBBC1C
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webapi.AutoMapper", "Webapi.AutoMapper\Webapi.AutoMapper.csproj", "{26AED6DE-E636-4324-95AC-C073C58ED667}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{2FE5F91C-ED28-48BE-BCFE-4DF2A68AE7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FE5F91C-ED28-48BE-BCFE-4DF2A68AE7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FE5F91C-ED28-48BE-BCFE-4DF2A68AE7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26AED6DE-E636-4324-95AC-C073C58ED667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26AED6DE-E636-4324-95AC-C073C58ED667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26AED6DE-E636-4324-95AC-C073C58ED667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26AED6DE-E636-4324-95AC-C073C58ED667}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

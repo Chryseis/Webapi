@@ -134,6 +134,10 @@
       <Project>{745dbb9d-5678-4100-a999-9a2c2fa6d795}</Project>
       <Name>Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Webapi.AutoMapper\Webapi.AutoMapper.csproj">
+      <Project>{26aed6de-e636-4324-95ac-c073c58ed667}</Project>
+      <Name>Webapi.AutoMapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Webapi\Webapi.csproj">
       <Project>{afef7cc2-190c-430c-995f-291d1822de47}</Project>
       <Name>Webapi</Name>
