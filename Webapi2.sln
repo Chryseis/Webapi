@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webapi.AutoMapper", "Webapi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webapi.nUnit", "Webapi.nUnit\Webapi.nUnit.csproj", "{280EE3F7-1126-4ED3-8157-83BB6DC03BC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webapi2.Owin", "Webapi2.Owin\Webapi2.Owin.csproj", "{5F363819-EF4C-4227-AD64-66CE97329A59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{280EE3F7-1126-4ED3-8157-83BB6DC03BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{280EE3F7-1126-4ED3-8157-83BB6DC03BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{280EE3F7-1126-4ED3-8157-83BB6DC03BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F363819-EF4C-4227-AD64-66CE97329A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F363819-EF4C-4227-AD64-66CE97329A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F363819-EF4C-4227-AD64-66CE97329A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F363819-EF4C-4227-AD64-66CE97329A59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
