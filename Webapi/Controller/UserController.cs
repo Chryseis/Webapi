@@ -12,6 +12,8 @@ using Autofac;
 using Autofac.Features.AttributeFilters;
 using Entity;
 using AutoMapper;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace Webapi.Controller
 {
@@ -43,6 +45,15 @@ namespace Webapi.Controller
             var userId = req.userId;
             var resUser = Mapper.Map<ResUserModel>(user);
             return resUser;
+        }
+
+        [HttpGet]
+        public IHttpActionResult CreateAuthCode()
+        {
+            HttpResponseMessage res = new HttpResponseMessage();
+            var imgStream = _userService.CreateAuthPic();
+            var contentType = "image/png";
+            return new ImgResult(imgStream,contentType);
         }
     }
 }

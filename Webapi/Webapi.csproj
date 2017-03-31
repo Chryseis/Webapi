@@ -76,6 +76,7 @@
     <Compile Include="Model\ReqUserModel.cs" />
     <Compile Include="Model\ResUserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Results\ImgResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
